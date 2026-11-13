@@ -20,7 +20,11 @@ target_include_directories(
         PRIVATE
         ${OpenCV_INCLUDE_DIRS}
         ${ONNXRUNTIME_ROOT}/include
+        ${ONNXRUNTIME_ROOT}/include/onnxruntime/core/session
+        ${ONNXRUNTIME_ROOT}/include/onnxruntime/core/providers/coreml
 )
+
+
 target_link_directories(segmentation PRIVATE ${ONNXRUNTIME_ROOT}/lib)
 target_link_libraries(
         segmentation

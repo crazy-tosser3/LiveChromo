@@ -17,6 +17,14 @@
 - ONNX Runtime;
 - ONNX-модель сегментации `model.onnx`.
 
+```
+mkdir -p third_party
+
+curl -fL "https://github.com/microsoft/onnxruntime/releases/download/v1.31.1/onnxruntime-osx-arm64-1.31.1.tgz" -o onnxruntime.tgz
+
+tar -xzf onnxruntime.tgz mv onnxruntime-osx-arm64-1.31.1 third_party/onnxruntime rm onnxruntime.tgz
+```
+
 В каталоге `third_party/onnxruntime` уже находится macOS arm64-сборка ONNX Runtime 1.22.0 с поддержкой CoreML. Для другой платформы или CUDA укажите путь к подходящей сборке через `ONNXRUNTIME_ROOT`.
 
 ## Сборка
